@@ -5,7 +5,7 @@ package com.sumika.spareArray;
  * @date 2019/9/14
  * @version 1.0
  */
-public class ASpareArray {
+public class ASpareArrayTransform {
     public static void main(String[] args) {
         int[][] chessArrSrc = construct2DimensionArr();
         System.out.println("原始的二维数组: ");
@@ -43,7 +43,7 @@ public class ASpareArray {
      * @param chessArrSrc 原始二维数组
      * @return 稀疏数组
      */
-    private static int[][] toSpareArr(int[][] chessArrSrc) {
+    static int[][] toSpareArr(int[][] chessArrSrc) {
         // 1. 遍历二维数组, 得到非 0 数据的个数
         int sum = 0;
         for (int[] row : chessArrSrc) {
@@ -81,7 +81,7 @@ public class ASpareArray {
      * 生成原始二维数组
      * @return 原始二维数组
      */
-    private static int[][] construct2DimensionArr() {
+    static int[][] construct2DimensionArr() {
         // 创建原始的二维数组, 0 表示没有棋子, 1 表示黑子, 2 表示白子
         int[][] chessArrSrc = new int[11][11];
         chessArrSrc[1][2] = 1;
@@ -96,7 +96,7 @@ public class ASpareArray {
      * @param arr
      *          要打印的数组
      */
-    private static void print2DimensionArr(int[][] arr) {
+    static void print2DimensionArr(int[][] arr) {
         for (int[] row : arr) {
             for (int data : row) {
                 System.out.printf("%d\t", data);
