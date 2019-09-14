@@ -3,6 +3,7 @@ package com.sumika.spareArray;
 import java.io.*;
 
 /**
+ * 数组序列化与反序列化
  * @auther emorabu
  * @date 2019/9/14
  * @version 1.0
